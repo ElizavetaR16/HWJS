@@ -8,15 +8,25 @@
             alert("Задание 2 - " + scc.reverse());
          
 
-            /*var str = 'http://helloWorld';
+            var str = 'http://helloo';
             var str2 = 'http://';
             str = str.substr(0, [7]);
-            if (str == str2) {
-            console.log(true);
-            } else {
-            console.log(false);
-            }*/
+                if (str == str2) {
+                    alert("Задание 3 - " +(true));
+                } else {
+                    alert("Задание 3 - " +(false));
+                }
+
     
+            var str = 'helloo.html';
+            var str2 = '.html';
+            str = str.substr(10);
+                if (str == str2) {
+                    alert("Задание 4 - " +(true));
+                } else {
+                    alert("Задание 4 - " +(false));
+                }
+
 
             var arr = [];
             var str = "x";
@@ -94,5 +104,60 @@
                 }
             alert("Задание 11 - " + summ);
 
-            
 
+            function getDigitsSum(numb) {
+            var array = String(numb).split("");
+            var summ = 0;
+                for (var i = 0; i < array.length; i++) {
+                summ += Number(array[i]);
+                }
+                return summ;
+                }
+            alert("Задание 12 - " + (getDigitsSum("1545")));
+
+
+            var str = 'var_text_hello';
+            var ar = str.split('_');
+            var array = [];
+                for (i = 1; i < ar.length; i++) {
+                ar[0].toLowerCase();
+                array.push(firstSymUp(ar[i]));
+                }
+            function firstSymUp(word) {
+            var resu = word.slice(0,1).toUpperCase() + word.slice(1);
+                return resu;
+                }
+            alert("Задание 13 - " + ar[0] + array.join(''));
+                
+            
+            function Array(text, array) {
+                for (var i = 0; i < array.length; i++) {
+                  if (array[i] === text) return true;
+                }
+                return false;
+                }
+            alert("Задание 14 - " + Array('meow', ['hello', 'js', 'cat', 'dog']));
+              
+
+            var arr = [1, 2, 3, 4, 5];
+            elemArrRecursion(arr);
+            function elemArrRecursion(arr) {
+                alert("Задание 15 - " + (arr.shift()));
+                if (arr.length > 0) {
+                elemArrRecursion(arr);
+                }
+            }
+
+
+            var num = 365;
+            function Nine(num){
+            var flag = 0;
+            var sum = 0;
+            var str = String(num);
+                for(var i = 0; i < str.length; i++){
+                sum += Number(str[i]);
+            };
+                if(sum <= 9){return sum} else {
+                return Nine(sum)};
+            }
+            alert("Задание 16 - " + Nine(num));    
