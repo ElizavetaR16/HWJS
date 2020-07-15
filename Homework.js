@@ -27,14 +27,17 @@
             alert("Задание 5 - " + arr);
 
 
+            var ss1 = 1;
+            var  ss2 = "1";
             var array = [];
-                for (var i = 1; i <= 10; i++) {
-                    var scc = "";
-                for (var p = 1; p <= i; p++) {
-                    scc += p;
+                for (var i = 0; i < 10; i++) {
+                array.push(ss2);
+                ss1+=1;
+                ss2=ss1.toString();
+                for (var j = 0; j <= i; j++) {
+                ss2+=ss1;
                 }
-                array.push(scc);
-                }
+                }               
             alert("Задание 6 - " + array);
 
 
