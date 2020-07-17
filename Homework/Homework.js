@@ -176,4 +176,114 @@
             document.getElementById("18").style.color = "red";
                     }
              
-                 
+            
+            function p() {
+                var elements = document.getElementsByClassName('zzz');
+                for (var i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = i+1;
+                }
+            }
+
+
+            var date = new Date();
+            alert("Задание 22 - Выведите на экран текущие день, месяц и год в формате 'год-месяц-день'. " + date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate());
+
+
+           
+            var months = ['Январь', 'Февраль', 'Mарт', 'Aпрель', 'Mай', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+            var dat = new Date();
+            var month = date.getMonth();
+            alert("Задание 23 - Выведите на экран текущий месяц словом, по-русски." + months[month]);
+
+
+            
+            var elem = document.getElementById('elem');
+            elem.classList.add('www');
+
+
+            
+            var elem = document.getElementById('elem');
+            elem.classList.remove('www');
+
+
+            
+            var elem = document.getElementById('elem');
+            var checkClass = elem.classList.contains('www');
+            console.log(checkClass);
+
+
+            
+            var elem = document.getElementById('elem');
+            elem.classList.toggle('www');
+
+
+            
+            var elem = document.getElementById('elem');
+            var length = elem.classList.length;
+            console.log(length);
+
+
+            
+            var elem = document.getElementById('elem');
+            var className = elem.classList;
+                for(var j = 0; j < className.length; j++){
+            alert("29 Задание - Дан элемент #elem. Выведите последовательно алертом его классы." + className[j]);
+            }
+
+
+            
+            var elem = document.getElementById('elem');
+            elem.style.cssText = 'color: red; font-size: 30px; border: 1px solid red;'
+
+
+            function clickElem(){
+                var elem = document.getElementById('elem');
+                alert("31 Задание - Дан элемент #elem. По клику на него выведите название его тега." + elem.tagName);
+                }
+
+
+            function clickElem(){
+                var elem = document.getElementById('elem');
+                alert("32 Задание - Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре." + elem.tagName.toLowerCase());
+                }
+
+
+            function clickElem(){
+                var elem = document.getElementById('elem');
+                alert("33 Задание - Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре." + elem.tagName.toLowerCase());
+                }
+
+
+            var ol = document.getElementById('ol');
+            var li = document.createElement('li');
+            li.innerHTML = 'пункт';
+            ol.appendChild(li);
+
+
+            var elem16 = document.getElementById('elem16');
+            elem16.firstElementChild.style.color = 'red';
+
+
+            var elem16 = document.getElementById('elem16');
+            elem16.lastElementChild.style.color = 'red';
+
+
+            var elem16 = document.getElementById('elem16');
+                for(var i = 0;i<elem16.children.length;i++){
+                    elem16.children[i].innerHTML += '!';
+            }
+
+
+            var ul = document.getElementById("ul");
+            ul.addEventListener("click", function func(event) {
+                var li = event.target.closest("li");
+                    if (li) {
+                    li.innerHTML +="!"; 
+                    }
+            });
+            var but = document.getElementsByTagName("button")[0];
+            but.addEventListener("click", function() {
+            var liElem = document.createElement("li");
+            liElem.innerHTML = "пункт";
+            ul.appendChild(liElem);
+            });     
