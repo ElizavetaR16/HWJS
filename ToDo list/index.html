@@ -1,21 +1,35 @@
-﻿<!DOCTYPE html>
-<html>
-<head lang="ru">
-<link rel="stylesheet" href="style.css">
-<script src="jva.js"></script>
-<meta charset="UTF-8">
-<title>ToDo list</title>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="header">
-            <img class="image" src="notebook.png">
-            <h1>Напоминания</h1>
-            <input type="text" placeholder="Сегодня мне нужно..." id="toDoEl">
-            <span class="addBtn" onclick="newElement()">Добавить</span>
+﻿<DOCTYPE html!>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "Stylesheet" href = "style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+        <title>ToDo list</title> 
+    </head>
+    <body>
+        <div class="wrapper">
+        <div id = "todo">
+            <h1> Напоминания <img class="image" src="notebook.png"> <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
+            <input type = "text" placeholder="Сегодня мне нужно...">
+            <ul class="todos">
+            </ul>
+            <div id= "buttons">
+                <button class="save">Сохранить</button>
+                <button class="clear">Очистить</button>
+                <button class="tipBtn">О программе</button>
+            </div>
         </div>
-        <ul id="list">
-        </ul>
     </div>
-</body>
-</html>
+        <div id = "overlay">
+           <a href="javascript:void(0)" class="closebtn">&times;</a>
+           <ul class="tips">
+               <li>Нажмите на карандаш, чтобы скрыть или показать область ввода</li>
+               <li>Введите текст в область ввода и нажмите enter, чтобы добавить todo в список</li>
+               <li>Чтобы удалить todo, наведите на todo и нажмите на крестик </li>
+               <li>Нажмите кнопку Очистить, чтобы очистить все todos из списка</li>
+               <li>Нажмите на кнопку сохранить, чтобы выйдя из браузера дела сохранились</li>
+            </ul>
+        </div>
+        <script src="jva.js"></script>
+    </body>
