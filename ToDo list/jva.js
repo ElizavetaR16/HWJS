@@ -19,6 +19,7 @@ pencil.addEventListener('click', function(){
 
 });
 
+// Удаление записи из списка
 function DeleteTodo() {
     for (let span of spans){
         span.addEventListener("click", function (){
@@ -27,6 +28,8 @@ function DeleteTodo() {
     }
 };
 
+
+// открывание типса и виджета по нажатию на кнопки
 tipsBtn.addEventListener("click", function(){
     overlay.style.height="100%";
 });
@@ -42,6 +45,8 @@ close2Btn.addEventListener("click", function(){
     overlay2.style.height="0";
 });
 
+
+// Скрыть input
 ul.addEventListener('click', function (e) {
     if(e.target.tagName === "LI") {
        e.target.classList.toggle('checked');
@@ -51,6 +56,10 @@ ul.addEventListener('click', function (e) {
     }
 }, 
 false);
+
+
+
+// функция добавления элементов в список
 input.addEventListener ("keypress", function(key){
     if(key.which ===13){
         var li = document.createElement ("li");
@@ -69,6 +78,9 @@ input.addEventListener ("keypress", function(key){
         }
     }
 });
+
+
+// Очищение и сохранение списка по нажатию на кнопки
 clearBtn.addEventListener('click', function () {
     ul.innerHTML= "";
     localStorage.removeItem("todoList", ul.innerHTML);
@@ -77,6 +89,8 @@ clearBtn.addEventListener('click', function () {
     localStorage.setItem ("todoList", ul.innerHTML);
  });
 
+
+// Загрузка данных в локальное хранилище
  function loadTodos() {
     const data = localStorage.getItem("todoList");
     if (data) {
