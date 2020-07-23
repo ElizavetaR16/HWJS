@@ -9,12 +9,16 @@ var clearBtn = document.querySelector(".clear");
 var lists = document.querySelectorAll("li");
 var tipsBtn = document.querySelector(".tipBtn");
 var closeBtn = document.querySelector(".closebtn");
+var close2Btn = document.querySelector(".close2btn");
 var overlay = document.getElementById("overlay");
+var overlay2 = document.getElementById("overlay2");
+var coronaBtn = document.querySelector(".coronaBtn");
 
 pencil.addEventListener('click', function(){
     input.classList.toggle ("display");
 
 });
+
 function DeleteTodo() {
     for (let span of spans){
         span.addEventListener("click", function (){
@@ -22,12 +26,22 @@ function DeleteTodo() {
         });
     }
 };
+
 tipsBtn.addEventListener("click", function(){
-overlay.style.height="100%";
+    overlay.style.height="100%";
 });
 closeBtn.addEventListener("click", function(){
     overlay.style.height="0";
+});  
+
+coronaBtn.addEventListener("click", function(){
+    overlay2.style.height="100%";
 });
+
+close2Btn.addEventListener("click", function(){
+    overlay2.style.height="0";
+});
+
 ul.addEventListener('click', function (e) {
     if(e.target.tagName === "LI") {
        e.target.classList.toggle('checked');

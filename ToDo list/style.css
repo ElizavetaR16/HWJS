@@ -94,7 +94,7 @@
   #buttons {
     display: inline-block;
     text-align: center;
-    margin-left: 18%;
+    margin-left: 3%;
     position: absolute;
     bottom: 10px; }
 
@@ -176,5 +176,43 @@
     width: 100%;
     text-align: center;
     margin-top: 25px; }
-  
+
+  .elfsight-app-d2740a90-cd3d-41b7-a0f4-ab7433929b06 {
+    width: 600px; 
+    height: 850px;
+    top: 30;
+  }
+
+  .crn {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    }
+
+  #overlay2 {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.753);
+    overflow-x: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+  }
+
+  #overlay2 .close2btn {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    font-size: 40px;
+    color: #fc96da70;
+    cursor: pointer;
+  }
+
+
   
